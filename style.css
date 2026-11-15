@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-left: 250px;
+  padding-top: 0;
+}
+
+h1 {
+
+  margin-top: 20px;
+  font-size: 10vw;
+  font-size: 36px;
+  color: #00f7ff;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+
+
+}
+
+header {
+  width: 0px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000000;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000088;
+  width: 220px;
+}
+
+.nav-links li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links li a:hover {
+  background-color: #3f0071;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px #00f7ff;
+  color: #00f7ff;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+
+  header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin: -30px 20px 20px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  #menu-toggle:checked+.menu-icon+.nav-links {
+    display: block;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 12px;
+  }
+}
+
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f7ff;
+  cursor: crosshair;
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.foot {
+  color: #c504bb;
+  font-size: 50px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 45px;
+  transition: color 0.3s;
+}
+
+.foot :hover {
+  color: #f0e005;
+  border-radius: 5px;
+  transition: (0.075, 0.82, 0.165, 1);
+}
+
+.sobre-nosotros {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00f7ff;
+  display: block;
+  margin: 20px auto;
+}
+
+.sobre {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  color: azure;
+  font-size: 20px;
+  margin: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #00f7ff;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #00f7ff;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #00f7ff;
+  }
+}
+
+h1 {
+  animation: pulse 1s infinite;
+}
+
+#formMensaje input,
+#formMensaje textarea {
+  padding: 10px;
+  border: 2px solid #f7c3d8;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#formMensaje input:focus,
+#formMensaje textarea:focus {
+  border-color: #e07aa3;
+  box-shadow: 0 0 8px rgba(224, 122, 163, 0.4);
+  outline: none;
+}
+
+.botun {
+ display: inline-block;
+  background-color: #1a1a2e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000088;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.botun:hover {
+ background-color: #3f0071;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px #00f7ff;
+  color: #00f7ff;
+}
